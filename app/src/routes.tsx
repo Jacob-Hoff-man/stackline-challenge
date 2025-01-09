@@ -1,11 +1,11 @@
 import { RouteData } from './types/route'
-import MainView from './views/MainView'
+import ItemView from './views/ItemView'
 
 const routes: RouteData[] = [
     {
         name: 'Home',
         path: '/',
-        element: <MainView />,
+        element: <ItemView />,
     },
 ]
 
