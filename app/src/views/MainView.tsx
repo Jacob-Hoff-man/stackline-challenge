@@ -1,13 +1,20 @@
-import { ReactElement } from "react"
+import { ReactElement, useEffect, useState } from "react"
+import { Item } from "../types/item"
+import { useGetItem } from "../hooks/item/useGetItem"
 
 type MainViewProps = {}
 
-const MainView = ({ }: MainViewProps): ReactElement => {
+const MainView = (): ReactElement => {
+    const [item, setItem] = useState<Item>()
 
+    const { data } = useGetItem("B007TIE0GQ")
+
+    useEffect(() => setItem(data), [data])
 
     return (
         <p>
             home view
+            {item && <p>{JSON.stringify(item)}</p>}
         </p >
     )
 }
