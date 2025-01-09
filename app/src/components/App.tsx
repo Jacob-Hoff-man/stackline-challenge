@@ -6,7 +6,7 @@ import routes from '../routes'
 
 const App = (): ReactElement => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/stackline-challenge">
       <Layout>
         <Router routes={routes} />
       </Layout>
