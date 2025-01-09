@@ -6,17 +6,19 @@ import ItemDetail from "../components/ItemDetail"
 import ItemSalesGraph from '../components/ItemSalesGraph'
 import ItemSalesTable from '../components/ItemSalesTable'
 import { Box, styled } from '@mui/material'
+import { setItem } from "../redux/item/itemSlice"
+import { useDispatch } from "react-redux"
 
 const ItemViewGridBox = styled(Box)(({ theme }) => ({
     marginTop: 60,
 }))
 
 const ItemView = (): ReactElement => {
-    const [item, setItem] = useState<Item>()
+    const dispatch = useDispatch()
 
     const { data } = useGetItem("B007TIE0GQ")
 
-    useEffect(() => setItem(data), [data])
+    useEffect(() => { if (data) dispatch(setItem(data)) }, [data])
 
     return (
         <ItemViewGridBox sx={{ flexGrow: 1 }}>
