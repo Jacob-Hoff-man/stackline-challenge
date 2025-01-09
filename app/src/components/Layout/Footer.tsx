@@ -1,11 +1,18 @@
-import '../../styles/footer.css'
+import { Container, styled } from '@mui/material'
 import { ReactElement } from 'react'
+
+const FooterContainer = styled(Container)(({ theme }) => ({
+    padding: '10px 20px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+}))
 
 const Footer = (): ReactElement => {
     return (
-        <p className='footer'>
+        <FooterContainer>
             Jacob Hoffman &copy; 2024
-        </p>
+        </FooterContainer>
     )
 }
 
