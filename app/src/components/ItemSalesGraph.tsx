@@ -8,11 +8,16 @@ const ItemSalesGraphContainer = styled(Paper)(() => ({
     marginRight: 16,
     marginBottom: 60,
     width: 'auto',
+    alignItems: 'center'
 }));
 
 const ItemSalesGraphTitle = styled(Typography)(() => ({
     paddingTop: 24,
     fontWeight: 300,
+}))
+
+const ItemSalesGraphLineChart = styled(LineChart)(() => ({
+    height: 448
 }))
 
 const ItemSalesGraph = (): ReactElement => {
@@ -25,11 +30,11 @@ const ItemSalesGraph = (): ReactElement => {
                     <ItemSalesGraphContainer>
                         <Container>
                             <ItemSalesGraphTitle>Retail Sales</ItemSalesGraphTitle>
-                            <LineChart
-                                height={320}
+                            <ItemSalesGraphLineChart
+                                leftAxis={null}
                                 dataset={item.sales}
-                                xAxis={[{ data: item.sales.map((sale) => Date.parse(sale.weekEnding)) }]}
-                                series={[{ dataKey: 'retailSales' }, { dataKey: 'wholesaleSales' }]}
+                                xAxis={[{ id: 'dateAxis', scaleType: 'utc', data: item.sales.map((sale) => new Date(sale.weekEnding)) },]}
+                                series={[{ dataKey: 'retailSales', showMark: false }, { dataKey: 'wholesaleSales', showMark: false }]}
                             />
                         </Container>
                     </ItemSalesGraphContainer>
