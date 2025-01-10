@@ -36,7 +36,7 @@ const ItemTagChip = styled(Chip)(() => ({
     marginRight: 4,
     marginBottom: 16,
     fontWeight: 200,
-    borderRadius: 3
+    borderRadius: 4
 }))
 
 const ItemDetail = (): ReactElement => {
