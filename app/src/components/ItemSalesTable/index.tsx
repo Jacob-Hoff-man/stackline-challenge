@@ -1,5 +1,5 @@
 import { ReactElement, useMemo, useState } from 'react'
-import { Box, Paper, styled, Table, TableBody, TableCell, TableHead, TableRow, TableSortLabel } from '@mui/material'
+import { Paper, styled, Table, TableBody, TableCell, TableRow } from '@mui/material'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { ItemSale } from '../../types/item';
@@ -66,7 +66,7 @@ const ItemSalesTable = (): ReactElement => {
             [...item.sales]
                 .sort(getComparator(order, orderBy))
             : undefined,
-        [order, orderBy],
+        [order, orderBy, item],
     );
 
     return (
@@ -77,15 +77,6 @@ const ItemSalesTable = (): ReactElement => {
 
                     <ItemSalesTableContainer>
                         <Table>
-                            {/* <TableHead>
-                                <TableRow>
-                                    <ItemSalesTableTitleCell>WEEK ENDING</ItemSalesTableTitleCell>
-                                    <ItemSalesTableTitleCell>RETAIL SALES</ItemSalesTableTitleCell>
-                                    <ItemSalesTableTitleCell>WHOLESALE SALES</ItemSalesTableTitleCell>
-                                    <ItemSalesTableTitleCell>UNITS SOLD</ItemSalesTableTitleCell>
-                                    <ItemSalesTableTitleCell>RETAILER MARGIN</ItemSalesTableTitleCell>
-                                </TableRow>
-                            </TableHead> */}
                             <ItemSalesTableHead
                                 order={order}
                                 orderBy={orderBy}
