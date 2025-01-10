@@ -25,8 +25,6 @@ const ItemSalesGraph = (): ReactElement => {
                             data: [2, 5.5, 2, 8.5, 1.5, 5],
                         },
                     ]}
-                    width={360}
-                    height={512}
                 />
             </Container>
         </ItemSalesGraphContainer>
