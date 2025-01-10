@@ -1,6 +1,6 @@
 # Stackline Challenge
 
-## Submission Creator: Jacob Hoffman, 10/09/2025
+## Submission Creator: Jacob Hoffman, 01/09/2025
 
 ### Instructions:
 
