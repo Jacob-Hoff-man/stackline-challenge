@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux"
 
 const ItemViewGridBox = styled(Box)(() => ({
     marginTop: 60,
+    flexGrow: 1
 }))
 
 const ItemView = (): ReactElement => {
@@ -20,7 +21,7 @@ const ItemView = (): ReactElement => {
     useEffect(() => { if (data) dispatch(setItem(data)) }, [data])
 
     return (
-        <ItemViewGridBox sx={{ flexGrow: 1 }}>
+        <ItemViewGridBox>
             <Grid container spacing={2}>
                 <Grid size={3}>
                     <ItemDetail />
