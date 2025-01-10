@@ -37,7 +37,7 @@ const headCells: readonly HeadCell<ItemSale>[] = [
 ];
 
 type ItemSalesTableHeadProps = {
-    onRequestSort: (event: React.MouseEvent<unknown>, property: keyof ItemSale) => void;
+    onRequestSort: (property: keyof ItemSale) => void;
     order: Order;
     orderBy: string;
 }
@@ -50,8 +50,8 @@ const ItemSalesTableHeadCell = styled(TableCell)(() => ({
 
 const ItemSalesTableHead = ({ order, orderBy, onRequestSort }: ItemSalesTableHeadProps) => {
     const createSortHandler =
-        (property: keyof ItemSale) => (event: React.MouseEvent<unknown>) => {
-            onRequestSort(event, property);
+        (property: keyof ItemSale) => () => {
+            onRequestSort(property);
         };
 
     return (

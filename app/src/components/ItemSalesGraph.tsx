@@ -1,4 +1,4 @@
-import { ReactElement, useMemo } from 'react'
+import { ReactElement } from 'react'
 import { Container, Paper, styled, Typography } from '@mui/material'
 import { LineChart } from '@mui/x-charts';
 import { useSelector } from 'react-redux';

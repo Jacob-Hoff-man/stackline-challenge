@@ -53,7 +53,6 @@ const ItemSalesTable = (): ReactElement => {
     const item = useSelector((state: RootState) => state.item.item)
 
     const handleRequestSort = (
-        event: React.MouseEvent<unknown>,
         property: keyof ItemSale,
     ) => {
         const isAsc = orderBy === property && order === 'asc';
