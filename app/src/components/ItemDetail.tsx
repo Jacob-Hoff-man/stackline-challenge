@@ -7,7 +7,7 @@ const ItemDetailContainer = styled(Paper)(() => ({
     marginLeft: 16,
     marginRight: 8,
     paddingTop: 24,
-    paddingBottom: 256,
+    paddingBottom: 'auto',
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

@@ -1,7 +1,7 @@
 import { Container, styled } from '@mui/material'
 import { ReactElement } from 'react'
 
-const FooterContainer = styled(Container)(({ theme }) => ({
+const FooterContainer = styled(Container)(() => ({
     padding: '10px 20px',
     display: 'flex',
     justifyContent: 'center',

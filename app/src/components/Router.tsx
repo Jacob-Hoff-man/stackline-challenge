@@ -2,7 +2,6 @@ import { ReactElement } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { RouteData } from '../types/route'
 
-
 type RouterProps = {
     routes?: RouteData[]
 }
