@@ -1,5 +1,4 @@
-import { ReactElement, useEffect, useState } from "react"
-import { Item } from "../types/item"
+import { ReactElement, useEffect } from "react"
 import { useGetItem } from "../hooks/item/useGetItem"
 import Grid from '@mui/material/Grid2'
 import ItemDetail from "../components/ItemDetail"
@@ -9,7 +8,7 @@ import { Box, styled } from '@mui/material'
 import { setItem } from "../redux/item/itemSlice"
 import { useDispatch } from "react-redux"
 
-const ItemViewGridBox = styled(Box)(({ theme }) => ({
+const ItemViewGridBox = styled(Box)(() => ({
     marginTop: 60,
 }))
 
