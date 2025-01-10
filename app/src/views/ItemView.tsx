@@ -23,10 +23,10 @@ const ItemView = (): ReactElement => {
     return (
         <ItemViewGridBox sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
-                <Grid size={4}>
+                <Grid size={3}>
                     <ItemDetail />
                 </Grid>
-                <Grid size={8}>
+                <Grid size={9}>
                     <ItemSalesGraph />
                     <ItemSalesTable />
                 </Grid>

@@ -10,3 +10,7 @@ body {
   padding: 0;
   background-color: rgb(246, 248, 250);
 }
+
+.item-thumbnail {
+  width: 160px;
+}
